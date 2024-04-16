@@ -30,10 +30,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme
-            .of(context)
-            .colorScheme
-            .inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
       body: Center(
@@ -41,14 +38,15 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[TheFuture()],
         ),
-      ),);
+      ),
+    );
   }
 }
 
 class TheFuture extends StatelessWidget {
   TheFuture({super.key});
 
-  final Future<List<dynamic>> packageInfo = Future.wait([
+  final packageInfo = Future.wait([
     Future.delayed(const Duration(seconds: 3)),
     PackageInfo.fromPlatform(),
   ]);
@@ -58,17 +56,12 @@ class TheFuture extends StatelessWidget {
     return FutureBuilder(
       future: packageInfo,
       builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return Text(
-              'Version: ${snapshot.data?.last.version}',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headlineMedium
-          );
-        }
+        if (!snapshot.hasData) return const CircularProgressIndicator();
 
-        return const CircularProgressIndicator();
+        return Text(
+          'Version: ${snapshot.data?.last.version}',
+          style: Theme.of(context).textTheme.headlineMedium,
+        );
       },
     );
   }

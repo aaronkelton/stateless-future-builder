@@ -2,15 +2,6 @@
 
 Example app how to use FutureBuilder in a StatelessWidget
 
-## Getting Started
+## Video Walkthrough
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://zoom.us/clips/share/yA6A4YoXlQSHx-gqmC9TKA3a-jfvQHYnDUuAucMV0J_43Os8ssQ_Oj1s7GSfVYwxv82KRSz7YRq4svmOkZDcyi8C.iy-NWanqe87h1c3n
